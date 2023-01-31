@@ -1,0 +1,70 @@
+@import "../../sass/utils/variables";
+
+
+#header{
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1440px;
+    margin-bottom: 80px;
+    height: 68px;
+        @media screen and (max-width:769px) {
+            justify-content: space-around;
+          
+            margin-bottom: 40px;
+            height: 47px;
+            width: 335px;
+        }
+}
+
+.App-logo {
+    height: 68px;
+    width: 210px;
+    margin-left: 20px;
+    margin-top: 20px;
+        @media screen and (max-width:769px) {
+            height: 47px;
+            width: 145px;
+        }
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+
+    height: 34px;
+    width: 309px;
+    top: 20px;
+
+    
+    &_link-home,
+    &_link-about{
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 500;
+
+        text-align: right;
+        text-decoration: none;
+
+        color : $primary-color;
+
+        &:hover,
+        &:focus{
+			text-decoration-line: underline;
+            cursor: pointer;
+		}
+
+            @media screen and (max-width:769px){
+                height: 17px;
+                width: 80px;
+                top: 18px;
+                font-size: 12px;
+
+                text-transform : uppercase;
+            }
+    }  
+    
+}
+
+
+

@@ -1,0 +1,13 @@
+@mixin banner {
+    object-fit: cover;
+    
+    height: 223px;
+    border-radius: 20px;
+        @media screen and (max-width: 769px){
+            height: 100px;
+            width: 335px;
+            margin-left: 10px;
+
+            border-radius: 10px;
+        }
+}

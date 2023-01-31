@@ -1,0 +1,25 @@
+@import "../../../sass/utils/mixins";
+@import "../../../sass/utils/variables";
+
+
+.group_banner{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+};
+
+.banner{
+   /* IMG */
+    position: absolute;
+    
+    @include banner
+        
+};
+
+.background{
+    /* BACKGROUND */
+    position: relative;
+    
+    @include banner 
+};

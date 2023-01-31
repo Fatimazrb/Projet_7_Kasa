@@ -1,0 +1,14 @@
+@import "../../sass/utils/variables";
+
+
+#header{
+    height: 68px;
+    max-width: 1440px;
+
+        @media screen and (max-width:769px){
+            width: 335px;
+            left: 20px;
+            top: 20px;
+        }
+}
+
