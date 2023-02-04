@@ -1,15 +1,11 @@
 .card {
-    display: flex;
-    flex-wrap: wrap;
-
     width: 340px;
     height: 340px;
+    position: relative;
+    margin: 28px;
     border-radius: 10px;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(0, 0, 0, 0.5) 100%
-    );
+    animation: fadeInUp 600ms ease-in-out;
+    overflow: hidden;
 
     @media screen and (max-width:769px){
         flex-wrap: nowrap;
@@ -18,16 +14,44 @@
         width: 335px;
         border-radius: 10px;
     }
+    &_img{
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 300ms;
+    }
         .name {
+            position: absolute;
+            bottom: 0;
+            font-size: 18px;
             font-weight: 500;
-            size: 18px;
-            padding-left: 10px;
-
-            display: flex;
-            align-items: flex-end;
-
-            color: #FFFFFF;
+            margin: 15px 20px;
+            color: white;
+            box-sizing: inherit;
         }
 
-    
+        &__overlay {
+            position: absolute;
+            top: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+            height: 100%;
+            width: 100%;
+            border-radius: inherit;
+          }
+          &:hover {
+            > .card__img {
+              transform: scale(1.01);
+            }
+          }
+        }
+        
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(5px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        
 }

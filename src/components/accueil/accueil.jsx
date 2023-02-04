@@ -1,22 +1,31 @@
-import '../accueil/accueil.scss';
-import Header from '../header/header';
+import './accueil.scss';
 import Banner from './banner/banner';
 import Card from "./card/card";
-import Footer from "../footer/footer";
+import { Link } from "react-router-dom";
+import logement from './card/data.json';
 
-function App() {
+function Accueil () {
+
   return (
-    <div>
-      <header>
-        <Header />
-      </header>
-      <main>
-        <Banner/>
-        <Card />
-      </main>
-      <Footer />
-    </div>
-  );
+    <section>
+      <div>
+        < Banner />
+      </div>
+        <div className="home__logement">
+          {logement.map((data) => {
+            return (
+              <article key={data.id}>
+                <Link to={`/logement/${data.id}`}>
+                <Card image={data.cover} title={data.title} />
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+    </section>
+	);
+   
 }
 
-export default App;
+export default Accueil;
+

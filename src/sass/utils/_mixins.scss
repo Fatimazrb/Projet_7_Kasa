@@ -1,6 +1,6 @@
 @mixin banner {
     object-fit: cover;
-    
+    margin-bottom: 40px;
     height: 223px;
     border-radius: 20px;
         @media screen and (max-width: 769px){

@@ -1,0 +1,39 @@
+@import "../../../sass/utils/variables";
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+
+    height: 34px;
+    width: 309px;
+    top: 20px;
+
+    
+    &_link-home,
+    &_link-about{
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 500;
+
+        text-align: right;
+        text-decoration: none;
+
+        color : $primary-color;
+
+        &:hover,
+        &:focus{
+			text-decoration-line: underline;
+            cursor: pointer;
+		}
+
+            @media screen and (max-width:769px){
+                height: 17px;
+                width: 80px;
+                top: 18px;
+                font-size: 12px;
+
+                text-transform : uppercase;
+            }
+    }  
+    
+}

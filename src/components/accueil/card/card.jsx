@@ -1,13 +1,14 @@
 import './card.scss';
+import React from "react";
 
-function Card () {
+const Cards = ({ image, title }) => {
+  return (
+    <div className="card">
+      <img src={image} alt="" className="card__img" />
+      <div className="card__overlay"></div>
+      <h2 className="name">{title}</h2>
+    </div>
+  );
+};
 
-    return (
-        <div className='card'>
-            <h4 className="name">Titre</h4>
-        </div>
-    )
-
-}
-
-export default Card;
+export default Cards;

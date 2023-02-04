@@ -1,14 +1,12 @@
-@import "../../sass/utils/variables";
+.home__logement{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 97%;
 
-
-#header{
-    height: 68px;
-    max-width: 1440px;
-
-        @media screen and (max-width:769px){
-            width: 335px;
-            left: 20px;
-            top: 20px;
-        }
-}
+    background-color: hsl(0, 0%, 86%);
+    border-radius: 20px;
+    padding: 15px;
+};
 

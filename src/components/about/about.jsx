@@ -1,21 +1,24 @@
 import "../about/about.scss";
-import Header from "../header/header";
-import Banner from "./banner/banner";
-import Footer from "../footer/footer";
+import AboutBanner from "./banner/banner";
+// import aboutArray from "./data_about.json"; // j'ai créé un fichier JSON avec les données des collapses
+// import Collapse from "../collapse/collapse";
 
 function About (){
 
     return (
-        <div>
-            <header>
-                <Header/>
-            </header>
-            <main>
-                <Banner />
-            </main>
-                <Footer />
-        </div>
         
+			<div>
+				<AboutBanner />
+			{/* {aboutArray.map((rule, id) => (
+				<Collapse
+					key={id}
+					aboutTitle={rule.aboutTitle}
+					aboutText={rule.aboutText}
+					aboutStyle="about-style"
+				/>
+			))} */}
+			</div>
+		  
     )
 
 }
