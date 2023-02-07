@@ -4,9 +4,7 @@
 
 .group_banner{
     margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
+    @include display;
 };
 
 .banner{

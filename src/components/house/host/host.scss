@@ -1,0 +1,24 @@
+@import "../../../sass/utils/variables";
+
+
+.host{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+
+    &__name{
+        color: $primary-color;
+
+        font-size: 18px;
+        font-weight:500px;
+        margin-right: 10px;
+    }
+        &__firstname{
+            margin-bottom: -15px;
+        }
+            &__picture{
+            border-radius: 50%;
+            height: 64px;
+            width: 64px;
+            }
+}

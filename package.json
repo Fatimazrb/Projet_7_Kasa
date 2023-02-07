@@ -23,7 +23,6 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "plugin:jsx-a11y/recommended",
       "react-app/jest"
     ]
   },
@@ -38,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0"
   }
 }

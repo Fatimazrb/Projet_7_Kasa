@@ -10,13 +10,10 @@
 
 .title{
     /* Chez vous, partout et ailleurs */
+    @include display;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    margin: auto;
     padding:80px;
 
-    font-family: 'Montserrat';
     font-style: normal;
 
     font-weight: 500;

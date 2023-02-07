@@ -1,0 +1,16 @@
+@import "../../sass/utils/mixins";
+
+
+
+.about{
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+   
+
+    &__dropdowns{
+        width: 90%;
+    }
+}

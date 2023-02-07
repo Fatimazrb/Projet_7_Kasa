@@ -1,10 +1,11 @@
 @import "../../sass/utils/variables";
 
+
 .errorNumber{
     font-size: 288px;
     font-weight: 700;
-    line-height: 411px;
-
+    margin-bottom: -50px;
+    margin-top: -20px;
     text-align: center;
 
     color: $primary-color;
@@ -13,9 +14,9 @@
 .errorText{
     font-size: 36px;
     font-weight: 500;
-    line-height: 51px;
+    margin-bottom: 150px;
 
-    text-align: left;
+    text-align: center;
 
     color: $primary-color;
 }
@@ -23,9 +24,9 @@
 .errorLinkHome{
     font-size: 18px;
     font-weight: 500;
-    line-height: 26px;
 
-    text-align: left;
+    display: flex;
+    justify-content: center;
 
     color: $primary-color;
 }

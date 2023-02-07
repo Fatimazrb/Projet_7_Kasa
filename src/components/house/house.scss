@@ -1,0 +1,35 @@
+@import "../../sass/utils/variables";
+
+.singlehouse{
+    display: flex;
+    justify-content: space-between;
+
+    
+        &__informations{
+            color: $primary-color;
+        }
+            &__title{
+                color: $primary-color;
+                font-size: 36px;
+                font-weight: 500px;
+            }
+                &__location{
+                    font-size: 18px;
+                    font-weight:500px;
+                }
+                    &__tags{
+                       display: flex;
+                    }
+
+                    &__rating-and-host{
+                        display: flex;
+                        flex-direction:column-reverse;
+
+                    };
+
+                    &__dropdowns{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+}
+

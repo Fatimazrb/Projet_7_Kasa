@@ -2,7 +2,7 @@ import './accueil.scss';
 import Banner from './banner/banner';
 import Card from "./card/card";
 import { Link } from "react-router-dom";
-import logement from './card/data.json';
+import logement from '../data.json';
 
 function Accueil () {
 
@@ -15,7 +15,7 @@ function Accueil () {
           {logement.map((data) => {
             return (
               <article key={data.id}>
-                <Link to={`/logement/${data.id}`}>
+                <Link to={`/house/${data.id}`}>
                 <Card image={data.cover} title={data.title} />
                 </Link>
               </article>

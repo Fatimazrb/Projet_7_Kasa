@@ -26,7 +26,7 @@
             cursor: pointer;
 		}
 
-            @media screen and (max-width:769px){
+            @media screen and (max-width:$breakpoint-desktop){
                 height: 17px;
                 width: 80px;
                 top: 18px;

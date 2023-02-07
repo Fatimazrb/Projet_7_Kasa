@@ -1,39 +1,43 @@
-// import { useState, useRef, useEffect } from "react"; //import des hooks de base react
-// import Chevron from "../../../assets/vectorBas.svg";
+import './collapse.scss';
 
-// export default function Collapse(props) {
-// 	const [toggle, setToggle] = useState(false); // je definie le state du toggle (et false par défaut)
-// 	const [heightEl, setHeightEl] = useState(); // je definie le state de la hauteur du collapse
+import React from 'react';
 
-// 	const toggleState = () => {
-// 		//je définie la fonction toggleState qui modifie la valeur toggle au clic
-// 		setToggle(!toggle);
-// 	};
+function Collapse({title, content}) {
+	const isCollapse = (e) => {
+		e.preventDefault();
+		const divText = e.target.nextSibling;
+		const arrow = e.target.lastChild;
+	
+		if (!divText.classList.contains("show")) {
+		  divText.classList.add("show");
+		  arrow.classList.add("rotate");
+		} else {
+		  divText.classList.remove("show");
+		  arrow.classList.remove("rotate");
+		}
+	  };
+	  return (
+		<div className="collapse ">
+		  <button type="button" className="collapse__button" onClick={isCollapse}>
+			{title}
+	
+			<p className="collapse__arrow">&lt;</p>
+		  </button>
+		  <div className="collapse__content">
+			{Array.isArray(content) ? (
+			  <ul className="collapse__list">
+				{content.map((equipment, index) => (
+				  <li key={index} className="collapse__list-element">
+					{equipment}
+				  </li>
+				))}
+			  </ul>
+			) : (
+			  <p className="collapse__text">{content}</p>
+			)}
+		  </div>
+		</div>
+	  );
+}
 
-// 	const refHeight = useRef(); //récupère et conserve la valeur de hauteur du collapse déplié
-
-// 	useEffect(() => {
-// 		setHeightEl(`${refHeight.current.scrollHeight}px`); //useEffect s'éxécute au montage du composant, dans ce cas, il définit la hauteur du collapse déplié lors de sa première ouverture et la conserve dans refHeight
-// 	}, []);
-
-// 	return (
-// 		// affiche le collapse replié par défaut et l'ouvre au clic puis le referme au clic en faisant disparaitre le texte et le style
-// 		<div className={`collapse ${props.aboutStyle}`}>
-// 			<div onClick={toggleState} className="collapse__visible">
-// 				<h2>{props.aboutTitle}</h2>
-// 				<img
-// 					className={toggle ? "chevron rotated" : "chevron"}
-// 					src={Chevron}
-// 					alt="chevron"
-// 				/>
-// 			</div>
-// 			<div
-// 				ref={refHeight}
-// 				className={toggle ? "collapse__toggle animated" : "collapse__toggle"}
-// 				style={{ height: toggle ? `${heightEl}` : "0px" }}
-// 			>
-// 				<p aria-hidden={toggle ? "true" : "false"}>{props.aboutText}</p>
-// 			</div>
-// 		</div>
-// 	);
-// }
+export default  Collapse;

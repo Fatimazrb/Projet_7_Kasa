@@ -1,0 +1,16 @@
+@import '../../../sass/utils/variables';
+
+
+.tag{
+    color:$secondary-color;
+    background-color: $primary-color;
+
+    text-align: center;
+
+    line-height:24px;
+    font-size: 14px;
+    height: 25px;
+    width: 115px;
+    border-radius: 20px;
+    margin-right:10px;
+}

@@ -1,8 +1,11 @@
 @mixin banner {
     object-fit: cover;
     margin-bottom: 40px;
+
     height: 223px;
     border-radius: 20px;
+    overflow: hidden;
+
         @media screen and (max-width: 769px){
             height: 100px;
             width: 335px;
@@ -10,4 +13,14 @@
 
             border-radius: 10px;
         }
+};
+
+@mixin display{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+};
+
+@mixin collapse{
+    
 }

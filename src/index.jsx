@@ -6,6 +6,7 @@ import Footer from './components/footer/footer';
 import About from './components/about/about';
 import Accueil from './components/accueil/accueil';
 import Error from "./components/error/error";
+import House from "./components/house/house";
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
@@ -17,9 +18,9 @@ root.render(
 				  <Route  path="/" element={<Accueil/>} />
 				{/* path="*" permet de renvoyé vers la page 404 ou vers une page prédéfinit
 			si l'utilisateur se "perd" */}
-				<Route  path="/about" element= {<About/>} />
-				<Route  path="*" element={<Error/>} /> 
-				{/* <Route path="products/:productId" element={<Singleproduct />} /> */}
+				<Route path="/about" element= {<About/>} />
+				<Route path="house/:houseId" element={<House />} />
+				<Route path="*" element={<Error/>} /> 
 				</Routes>
 				
       <Footer />
