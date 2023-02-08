@@ -1,15 +1,17 @@
 @import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
 
 
 .home__logement{
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    width: 97%;
+    @include display;
+    width: 100%;
 
     background-color: $background-color;
-    border-radius: 20px;
-    padding: 15px;
+    border-radius: $border-radius-normal;
+
+        @media screen and (max-width:$breakpoint-small){
+            background-color: white;      
+        }
 };
 

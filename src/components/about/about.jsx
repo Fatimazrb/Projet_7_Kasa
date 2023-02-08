@@ -1,5 +1,5 @@
-import "../about/about.scss";
-import AboutBanner from "./banner/banner";
+import "./about.scss";
+import AboutBanner from "./banner/about_banner";
 import aboutData from "./data_about.js"; // j'ai créé un fichier avec les données des collapses
 import Collapse from "../collapse/collapse";
 
@@ -23,13 +23,13 @@ function About (){
 
   return (
     <main>
-      <section>
+      <section  className="about__main">
         <AboutBanner/>
-        <div className="about">
-          <Collapse className="about__dropdowns" title="Fiabilité" content={content("fiability")} />
-          <Collapse className="about__dropdowns" title="Respect" content={content("respect")} />
-          <Collapse className="about__dropdowns" title="Service" content={content("service")} />
-          <Collapse className="about__dropdowns" title="Sécurité" content={content("security")} />
+        <div className="about__dropdowns">
+          <Collapse title="Fiabilité" content={content("fiability")} />
+          <Collapse title="Respect" content={content("respect")} />
+          <Collapse title="Service" content={content("service")} />
+          <Collapse title="Sécurité" content={content("security")} />
         </div>
       </section>
     </main>

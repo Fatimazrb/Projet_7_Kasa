@@ -6,10 +6,15 @@
     color: $secondary-color;
     margin-bottom: 20px;
     margin-top: 20px;
-    width: 80%;
+    padding: 10px;
+    width: 100%;
+   
 
-    // @include display;
+    @media screen and (max-width: $breakpoint-small){
+      width: 335px;
+    }
 
+    
     @for $i from 1 through 4 {
       &:nth-of-type(#{$i}) {
         $delay: 120ms * $i;
@@ -32,14 +37,17 @@
       cursor: pointer;
       position: relative;
       z-index: 1;
+        
+    @media screen and (max-width: $breakpoint-small){
+      height: 30px;
+    }
     }
   
     &__arrow {
-        width :20px;
-        height :6px;
-        font-size: 20px;
+        margin-top: 15px;
+        width :18px;
+        height :18px;
         pointer-events: none;
-        transform: rotate(90deg);
         transition: transform 300ms;
         translate: -50% -50%;
       }
@@ -59,12 +67,18 @@
     .collapse__text {
       margin: 0;
       font-size: 15px;
+      @media screen and (max-width:$breakpoint-small){
+        font-size: $size-small;
+      }
     }
     .collapse__list {
       list-style: none;
       padding: 0;
       margin: 0;
       font-size: 15px;
+      @media screen and (max-width:$breakpoint-small){
+        font-size: $size-small;
+      }
     }
     .collapse__list-element {
       margin-bottom: 3px;

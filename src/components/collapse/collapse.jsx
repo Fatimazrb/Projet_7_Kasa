@@ -1,4 +1,5 @@
 import './collapse.scss';
+import Arrow from "../../assets/slideDown.png";
 
 import React from 'react';
 
@@ -21,7 +22,7 @@ function Collapse({title, content}) {
 		  <button type="button" className="collapse__button" onClick={isCollapse}>
 			{title}
 	
-			<p className="collapse__arrow">&lt;</p>
+			<img className="collapse__arrow"  alt ="arrow" src={Arrow}/>
 		  </button>
 		  <div className="collapse__content">
 			{Array.isArray(content) ? (

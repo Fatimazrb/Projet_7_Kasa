@@ -1,4 +1,5 @@
 @import "../../../sass/utils/variables";
+@import "../../../sass/utils/mixins";
 
 .nav{
     display: flex;
@@ -8,6 +9,17 @@
     width: 309px;
     top: 20px;
 
+    &_link{
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+
+        @media screen and (max-width:$breakpoint-small){
+            width: 70%;
+            justify-content: space-between;
+            justify-content:left;
+        }
+    }
     
     &_link-home,
     &_link-about{
@@ -25,15 +37,11 @@
 			text-decoration-line: underline;
             cursor: pointer;
 		}
+        @media screen and (max-width:$breakpoint-small){
+            font-size: 12px;
+            text-transform : uppercase;
+            padding: 4px;
 
-            @media screen and (max-width:$breakpoint-desktop){
-                height: 17px;
-                width: 80px;
-                top: 18px;
-                font-size: 12px;
-
-                text-transform : uppercase;
-            }
-    }  
-    
+        }       
+    }   
 }

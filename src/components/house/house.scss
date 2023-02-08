@@ -1,35 +1,47 @@
 @import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
 
 .singlehouse{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 
-    
+            @media screen and (max-width:$breakpoint-small){
+                display: flex;
+                flex-direction: column;
+            }
         &__informations{
             color: $primary-color;
         }
             &__title{
-                color: $primary-color;
                 font-size: 36px;
                 font-weight: 500px;
+                @include normal-size;
             }
                 &__location{
-                    font-size: 18px;
+                    font-size: $size-normal;
                     font-weight:500px;
+                    @include medium-size;
                 }
                     &__tags{
                        display: flex;
+                       flex-wrap: wrap;
                     }
 
                     &__rating-and-host{
                         display: flex;
                         flex-direction:column-reverse;
-
+                        @media screen and (max-width:$breakpoint-small){
+                           width: 335px;
+                           height: 100px;
+                           justify-content: space-between;
+                           display: inline-block;
+                        }
                     };
 
                     &__dropdowns{
                         display: flex;
-                        justify-content: space-between;
-                    }
-}
+                        justify-content: space-around;
+                    };
+};
 

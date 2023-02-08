@@ -1,0 +1,41 @@
+@import "../../../sass/utils/mixins";
+@import "../../../sass/utils/variables";
+
+
+.about{
+    @include display;
+
+    &__banner__small{
+        display:none;
+        @media screen and (max-width:$breakpoint-small){
+            @include display;
+            @include banner;
+            position: absolute;
+            width: 336px;
+            display: initial;
+        }
+    }
+
+    &__banner{
+        /* IMG */
+        position: absolute;
+        display: initial;
+            
+        @include banner;
+        @media screen and (max-width:$breakpoint-small){
+            width: 336px;
+            display: none;
+        }
+    }
+
+    &__background{
+        /* BACKGROUND */
+    position: relative;
+    
+    @include banner;
+    @media screen and (max-width:$breakpoint-small){
+        width: 336px;
+    };
+    }
+};
+

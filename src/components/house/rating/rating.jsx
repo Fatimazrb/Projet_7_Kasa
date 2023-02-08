@@ -15,14 +15,14 @@ function Rating ({rating}) {
             rating >= star ? (
               <img
                 key={star.toString()}
-                className="star"
+                className="rating_star"
                 src={redstar}
                 alt=""
               />
             ) : (
               <img
                 key={star.toString()}
-                className="star"
+                className="rating_star"
                 src={greystar}
                 alt=""
               />

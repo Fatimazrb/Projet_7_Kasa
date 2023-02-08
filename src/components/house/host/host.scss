@@ -1,4 +1,5 @@
 @import "../../../sass/utils/variables";
+@import "../../../sass/utils/mixins";
 
 
 .host{
@@ -6,12 +7,18 @@
     display: flex;
     justify-content: flex-end;
 
+    @media  screen and (max-width:$breakpoint-small){
+        display:flex;
+    }
+
     &__name{
         color: $primary-color;
 
         font-size: 18px;
         font-weight:500px;
         margin-right: 10px;
+
+        @include small-size;
     }
         &__firstname{
             margin-bottom: -15px;

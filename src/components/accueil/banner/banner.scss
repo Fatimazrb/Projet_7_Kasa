@@ -1,51 +1,57 @@
 @import "../../../sass/utils/variables";
 @import "../../../sass/utils/mixins";
 
-.group_banner{
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-
-.title{
-    /* Chez vous, partout et ailleurs */
+.group{
     @include display;
-    position: absolute;
-    padding:80px;
+    @include media-query-small;
+    
+    &_banner{
+         /* IMG */
+    position: absolute;    
+    @include banner;
+    @include media-query-small;
+    }
 
+    &_background{
+        /* BACKGROUND */
+    position: relative;
+    
+    @include banner;
+    @include media-query-small;
+    }
+
+    &_title{
+        /* Chez vous, partout et ailleurs */
+    position: absolute;
+    padding:30px;
     font-style: normal;
 
     font-weight: 500;
     font-size: 48px;
     z-index: 1;
-    /* or 68px */
 
     display: flex;
     align-items: flex-end;
 
     color: white;
 
-        @media screen and (max-width: 769px){
-            font-size: 18px;
-            height: 48px;
-            width: 217px;
-            left: 36px;
-            top: 104px;
+        @media screen and (max-width: $breakpoint-small){
+            position: absolute;
+            left: 2%;
+          
+            font-style: normal;
+            font-weight: 500px;
+            font-size: 24px;
+
+            display: flex;
+            align-items:flex-end;
+            margin:auto;
         }
-};
+    }
 
-.banner{
-   /* IMG */
-    position: absolute;
+    &_line{
+       @include line_break;
+    }
     
-    @include banner
-        
-};
-
-.background{
-    /* BACKGROUND */
-    position: relative;
-    
-    @include banner 
 }
+

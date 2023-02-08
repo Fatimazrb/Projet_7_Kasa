@@ -1,26 +1,49 @@
+@import "./variables";
+
+
 @mixin banner {
     object-fit: cover;
     margin-bottom: 40px;
-
     height: 223px;
-    border-radius: 20px;
-    overflow: hidden;
-
-        @media screen and (max-width: 769px){
-            height: 100px;
-            width: 335px;
-            margin-left: 10px;
-
-            border-radius: 10px;
-        }
+    border-radius: $border-radius-normal;
 };
+
+@mixin media-query-small{
+    @media screen and (max-width: $breakpoint-small){
+        width: 335px;
+        height: 111px;
+        margin:8px;
+        border-radius: $border-radius-small;
+
+    }
+}
 
 @mixin display{
     display: flex;
     justify-content: center;
-    margin: auto;
 };
 
-@mixin collapse{
-    
+@mixin small-size{
+    @media screen and (max-width:$breakpoint-small){
+        font-size: $size-small;
+    }
+}
+
+@mixin normal-size{
+    @media screen and (max-width:$breakpoint-small){
+        font-size: $size-normal;
+    } 
+}
+
+@mixin medium-size{
+    @media screen and (max-width:$breakpoint-small){
+        font-size: $size-medium;
+    } 
+}
+
+@mixin line_break{
+    display:none;
+    @media screen and (max-width:$breakpoint-small){
+        display:initial;
+    }
 }

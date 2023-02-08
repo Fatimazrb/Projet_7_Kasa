@@ -1,28 +1,28 @@
+@import "../../sass/utils/variables";
 
 #header{
     display: flex;
     justify-content: space-between;
 
     max-width: 1440px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     height: 68px;
-        @media screen and (max-width:769px) {
-            justify-content: space-around;
-          
-            margin-bottom: 40px;
-            height: 47px;
-            width: 335px;
+        @media screen and (max-width:$breakpoint-small) {
+            display: flex;
+            margin-bottom: 20px;
+            height: 87px;
+            width: 100%;
         }
 }
 
 .App-logo {
     height: 68px;
     width: 210px;
-    margin-left: 20px;
-    margin-top: 20px;
-        @media screen and (max-width:769px) {
+    padding: 15px;
+        @media screen and (max-width:$breakpoint-small) {
             height: 47px;
-            width: 145px;
+            width: 35%;
+            margin: auto;
         }
 }
 

@@ -1,6 +1,19 @@
+@import "../../../sass/utils/variables";
+@import "../../../sass/utils/mixins";
+
 .rating{
     width: 196px;
     height: 36px;
 
     text-align: end;
+
+    &_star{
+        width: 30px;
+        height:30px;
+
+        @media screen and (max-width:$breakpoint-small){
+            width:15px;
+            height:15px;
+        }
+    }
 };
