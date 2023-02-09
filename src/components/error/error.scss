@@ -13,6 +13,7 @@
         color: $primary-color;
     
         @media screen and (max-width:$breakpoint-small){
+            margin-top: 100px;
             font-size: 96px;
             margin-bottom: 20px;
           }
@@ -20,7 +21,7 @@
 
     &__Text{
         font-size: 36px;
-        font-weight: 500;
+        @include font;
         margin-bottom: 150px;
     
         text-align: center;
@@ -33,11 +34,10 @@
     }
 
     &__LinkHome{
-        font-size: 18px;
-        font-weight: 500;
+        font-size: $size-normal;
+        @include font;
     
-        display: flex;
-        justify-content: center;
+        @include display;
     
         color: $primary-color;
     

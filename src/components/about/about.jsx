@@ -13,7 +13,7 @@ function About (){
         return aboutData.respect;
       case "service":
         return aboutData.service;
-      case "sécurity":
+      case "security":
         return aboutData.security;
       default:
         console.log("default");

@@ -2,7 +2,7 @@ import './accueil.scss';
 import Banner from './banner/banner';
 import Card from "./card/card";
 import { Link } from "react-router-dom";
-import logement from '../data.json';
+import house from '../data.json';
 
 function Accueil () {
 
@@ -11,8 +11,8 @@ function Accueil () {
       <div>
         < Banner />
       </div>
-        <div className="home__logement">
-          {logement.map((data) => {
+        <div className="home__house">
+          {house.map((data) => {
             return (
               <article key={data.id}>
                 <Link to={`/house/${data.id}`}>

@@ -8,17 +8,25 @@
     justify-content: flex-end;
 
     @media  screen and (max-width:$breakpoint-small){
+        margin-top: -25px;
+        height: 50px;
         display:flex;
+        align-items: right;
     }
 
     &__name{
         color: $primary-color;
 
-        font-size: 18px;
-        font-weight:500px;
+        font-size: $size-normal;
+        @include font;
         margin-right: 10px;
-
-        @include small-size;
+        
+        @media  screen and (max-width:$breakpoint-small){
+            height: 33px;
+            width: 93px;
+            margin-top: -8px;
+            @include small-size;
+        }
     }
         &__firstname{
             margin-bottom: -15px;
@@ -27,5 +35,10 @@
             border-radius: 50%;
             height: 64px;
             width: 64px;
+
+            @media  screen and (max-width:$breakpoint-small){
+                height: 32px;
+                width: 32px;
+            }
             }
 }

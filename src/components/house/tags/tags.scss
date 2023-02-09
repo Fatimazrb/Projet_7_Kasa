@@ -1,4 +1,5 @@
 @import '../../../sass/utils/variables';
+@import '../../../sass/utils/mixins';
 
 
 .tag{
@@ -6,11 +7,20 @@
     background-color: $primary-color;
 
     text-align: center;
+    font-size: $size-medium;
+    @include font;
 
     line-height:24px;
-    font-size: 14px;
-    height: 25px;
-    width: 115px;
+    height: 22px;
+    min-width: 115px;
     border-radius: 20px;
     margin-right:10px;
+    padding: 5px;
+
+    @media screen and (max-width:$breakpoint-small){
+        height: 18px;
+        width: 84px;
+        border-radius: $border-radius-extra-small;
+        font-size: 10px;
+    }
 }

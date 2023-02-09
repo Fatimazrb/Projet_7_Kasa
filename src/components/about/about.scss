@@ -1,19 +1,13 @@
 @import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
 
 
 .about__main{
-    width: 90%;
-    justify-content: center;
+    width: 80%;
     margin: auto;
-    display: flex;
+    @include display;
     flex-direction: column;
-   
-
-    &__dropdowns{
-        width: 90%;
-    }
-
     @media screen and (max-width: $breakpoint-small) {
-        width: 100%;
+       width: 100%;
     }
 }

@@ -3,13 +3,19 @@
 
 .group{
     @include display;
-    @include media-query-small;
+    @media screen and (max-width: $breakpoint-small){
+        @include media-query-small;  
+        @include display;
+        width: 100%;
+    }
+    
     
     &_banner{
          /* IMG */
     position: absolute;    
     @include banner;
     @include media-query-small;
+    
     }
 
     &_background{
@@ -24,9 +30,7 @@
         /* Chez vous, partout et ailleurs */
     position: absolute;
     padding:30px;
-    font-style: normal;
 
-    font-weight: 500;
     font-size: 48px;
     z-index: 1;
 
@@ -35,18 +39,19 @@
 
     color: white;
 
+    @include font;
+
         @media screen and (max-width: $breakpoint-small){
             position: absolute;
-            left: 2%;
-          
-            font-style: normal;
-            font-weight: 500px;
+            left: 5%;
+        
             font-size: 24px;
 
             display: flex;
             align-items:flex-end;
             margin:auto;
         }
+       
     }
 
     &_line{
